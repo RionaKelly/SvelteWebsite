@@ -4,10 +4,10 @@
 
    :root {
     /* Color Variables */
-    --primary-color: #007bff;
-    --background-color: #ff0ef3;
-    --text-color: #333;
-    --link-hover-color: #0056b3;
+    --primary-color: #70b4fd;
+    --background-color: #df99f5;
+    --text-color: #272727;
+    --link-hover-color: #6001ad;
 
     /* Font Variables */
     --font-family: 'Arial', sans-serif;

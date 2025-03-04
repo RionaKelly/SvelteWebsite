@@ -1,3 +1,7 @@
+<head>
+    <meta name="author" content="Riona Kelly">
+</head>
+
 <script>
     import { onMount } from 'svelte';
 

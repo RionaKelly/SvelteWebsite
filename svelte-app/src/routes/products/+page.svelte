@@ -1,3 +1,7 @@
+<head>
+    <meta name="author" content="Carla Epifanio Vivero">
+</head>
+
 <script>
     import { onMount } from 'svelte';
 

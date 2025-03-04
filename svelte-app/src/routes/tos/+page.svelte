@@ -1,8 +1,12 @@
+<head>
+    <meta name="author" content="Carla Epifanio Vivero">
+</head>
+
 <script>
     import { onMount } from 'svelte';
 
     onMount(() => {
-        console.log("TOS Page Loaded");
+        console.log("TOS & Privacy Page Loaded");
     })
 </script>
 

@@ -8,7 +8,6 @@
         <li><a href="/faq">FAQ</a></li>
         <li><a href="/toc">TOC</a></li>
         <li><a href="/contact">Contact</a></li>
-        <li><a href="/privacy">Privacy</a></li>
     </ul>
 </nav>
 

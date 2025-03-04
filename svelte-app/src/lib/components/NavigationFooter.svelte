@@ -5,11 +5,10 @@
 
 <nav>
     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/products">Products</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/cart">Cart</a></li>
-        <li><a href="/account">Account</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/toc">TOC</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/privacy">Privacy</a></li>
     </ul>
 </nav>
 

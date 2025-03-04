@@ -1,10 +1,12 @@
 <script>
-
+    // import NavigationFooter.svelte from lib folder
+    import { NavigationFooter } from "$lib"
 </script>
-
 
 <footer>
     <p>&copy; 2025 My Svelte App. All rights reserved.</p>
+    <!-- Navigation -->
+    <NavigationFooter />
 </footer>
 
 

@@ -37,4 +37,17 @@
         width: 50px;
         margin-right: 0.625rem;
     }
+
+    /* Mobile: Center logo and stack items */
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .logo {
+            justify-content: left;
+        }
+    }
+
 </style>

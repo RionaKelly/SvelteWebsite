@@ -20,4 +20,13 @@
         bottom: 0;
         width: 100%;
     }
+
+    /*Mobile: Reduce padding for a more compact look 
+    @media (max-width: 768px) {
+        footer {
+            padding: 0.75rem;
+            position: relative;
+            font-size: 0.9rem;
+        }
+    } -- Comment out to enable -> */
 </style>

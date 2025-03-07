@@ -5,8 +5,7 @@
 <!-- Navigation Container -->
 <nav class="nav">
     <!-- Burguer Menu Button (Visible on Small Screens) -->
-    <button class="burguer" on:click={() => isOpen = !isOpen} aria-label="Toggle navigation">
-    </button>
+    <button class="burguer" on:click={() => isOpen = !isOpen} aria-label="Toggle navigation"> ☰ </button>
 
     <!-- Navigation Links -->
     <ul class:open={isOpen}>
@@ -21,7 +20,6 @@
 <style>
     /* Base Navigation Styling */
     .nav {
-        background-color: ##007bff;
         padding: 1rem;
         text-align: center;
     }
@@ -57,7 +55,7 @@
         background: none;
         border: none;
         cursor: pointer;
-        color: white;
+        color: #6a1e73;
         position: absolute;
         top: 1rem;
         left: 1rem;
@@ -77,7 +75,7 @@
             top: 90px;
             left: 0;
             width: 100%;
-            background: #007bff;
+            background: #6a1e73;
             text-align: left;
             padding: 1rem 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

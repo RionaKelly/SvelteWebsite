@@ -12,7 +12,7 @@
 
 <style>
     footer {
-        background-color: #343a40;
+        background-color: #df99f5;
         color: white;
         text-align: center;
         padding: 1rem;

@@ -8,7 +8,7 @@
     <!-- Logo -->
     <div class="logo">
         <img src="/logo.png" alt="Website Logo">
-        <h1>My Svelte App</h1>
+        <h1>Lilac</h1>
     </div>
 
     <!-- Navigation -->
@@ -22,7 +22,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #343a40;
+        background-color: #df99f5;
         color: white;
         padding: 1rem;
     }

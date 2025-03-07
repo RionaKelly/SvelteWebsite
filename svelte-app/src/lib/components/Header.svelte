@@ -19,29 +19,29 @@
 <style>
     /* Header Styling */
     header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #df99f5;
+        display: flex; /* Enables Flexbox */
+        align-items: center; /* Vertically centers the items */
+        justify-content: space-between; /* Pushes logo to left, nav to right */
+        background-color: var(--primary-color);
         color: white;
         padding: 1rem;
     }
 
     /* Logo Container */
     .logo {
-        display: flex;
-        align-items: center;
+        display: flex; /* Makes logo container a Flexbox */
+        align-items: center; /* Aligns text and image vertically */
     }
 
     .logo img {
         width: 50px;
-        margin-right: 0.625rem;
+        margin-right: 10px;
     }
 
     /* Mobile: Center logo and stack items */
     @media (max-width: 768px) {
         header {
-            flex-direction: column;
+            flex-direction: column; /* Stacks items vertically */
             text-align: center;
         }
 

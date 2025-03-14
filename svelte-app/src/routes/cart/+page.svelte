@@ -10,5 +10,10 @@
     })
 </script>
 
-<h1>Welcome to our Website</h1>
-<p>This is a temporary cart page.</p>
+<h1> CHECKOUT</h1>
+
+<style>
+    h1 { 
+        text-align: right;
+    }
+</style>

@@ -7,7 +7,9 @@
 <header>
     <!-- Logo -->
     <div class="logo">
-        <img src="/logo.png" alt="Website Logo">
+        <a href="/">
+            <img src="/logo.png" alt="Website Logo">
+        </a>
         <h1>Lilac</h1>
     </div>
 

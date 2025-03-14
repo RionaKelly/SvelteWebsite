@@ -21,12 +21,13 @@
     .card {
         background: white;
         border-radius: 10px; /* Rounded corners */
-        border: 2px solid #007bff;
+        border: 2px solid #6a1e73;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         overflow: hidden;
         width: 280px;
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+        animation: fadeInSlide 0.6s ease-out;
     }
 
 
@@ -77,5 +78,16 @@
     /* When .card is hovered,expand the decorative effect to 80% */
     .card:hover .content h2::before {
         width: 80%; /* Expanded width on hover */
+    }
+
+    @keyframes fadeInSlide {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 </style>

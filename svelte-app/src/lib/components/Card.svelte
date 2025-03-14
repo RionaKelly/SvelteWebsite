@@ -11,11 +11,11 @@
 
     <!-- Card Content -->
     <div class="content">
-        <h2>{title}<h2>
+        <h2>{title}</h2>
         <p>{description}</p>
     </div>
-</div>
 
+</div>
 <style>
     /* Card container with smooth hover effects */
     .card {
@@ -29,6 +29,7 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
     }
 
+
     /* Advanced Selector: Direct Child Combinator (>)
        This ensures that only direct `img` elements inside `.card` get these styles */
     .card > img {
@@ -36,6 +37,7 @@
         height: auto; /* Maintain aspect ratio */
         border-radius: 8px 8px 0 0; /* Round only the top corners */
     }
+
 
     /* Content Styling: Padding for better spacing */
     .content {

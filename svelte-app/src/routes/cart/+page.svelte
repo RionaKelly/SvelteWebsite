@@ -14,6 +14,6 @@
 
 <style>
     h1 { 
-        text-align: bottom;
+        text-align: right;
     }
 </style>

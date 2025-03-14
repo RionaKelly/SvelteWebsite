@@ -12,4 +12,5 @@ export { default as Card } from "./components/Navigation.svelte";
 // @ts-ignore
 export { default as Modal } from "./components/Modal.svelte";
 
+// @ts-ignore
 import {Header, Navigation, NavigationFooter, Footer, Card, Modal} from "$lib";

@@ -15,6 +15,11 @@
         <p>{description}</p>
     </div>
 
+    <!-- Gallery -->
+    <div class="gallery">
+       
+    </div>
+
 </div>
 <style>
     /* Card container with smooth hover effects */
@@ -90,4 +95,21 @@
             transform: translateY(0);
         }
     }
+
+    /* Grid Layout for the Gallery */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-top: 2rem;
+    }
+
+    /* Adding Uniform Height */
+    .gallery > .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
 </style>

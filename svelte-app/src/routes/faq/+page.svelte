@@ -25,3 +25,13 @@
 <b>- What is your return policy?</b>
 <p>- We do not offer refunds.</p>
 <br>
+
+<style>
+    @media (max-width: 7px) {
+        footer {
+            padding: 0.75rem;
+            position: relative;
+            font-size: 0.9rem;
+        }
+    }
+</style>

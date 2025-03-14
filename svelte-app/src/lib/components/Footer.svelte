@@ -28,5 +28,5 @@
             position: relative;
             font-size: 0.9rem;
         }
-    } -- Comment out to enable -> */
+    } */
 </style>

@@ -4,7 +4,7 @@
 
 <script>
     import { onMount } from 'svelte';
-
+  
     onMount(() => {
         console.log("Products Page Loaded");
     })
@@ -16,15 +16,18 @@
 
 
 <style>
+
 div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
+  margin: 20px;
+  border: 1px solid #df99f5;
+  background-color: #f2daf9;
   float: left;
-  width: 180px;
+  width: 450px;
+  padding: 5px;
 }
 
 div.gallery:hover {
-  border: 1px solid #777;
+  border: 1px solid #6a1e73;
 }
 
 div.gallery img {
@@ -38,34 +41,42 @@ div.desc {
 
 div.title {
   text-align: center;
-  padding: 10px;
+  padding: 1px;
   text-decoration: none;
   color: #6a1e73;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  div.gallery {
+    flex-direction: column; /* Stacks items vertically */
+    text-align: center;
+    width: 230px;
+  }
 }
 </style>
 <body>
 
     <div class="gallery">
         <a href="/">
-        <img src="background.jpg" alt="Lavender" width="600" height="800">
+        <img src="Blueberry Lavender Iced Tea.jpg" alt="Blueberry Lavender Tea Cans" width="600" height="700">
+        </a>
+    <div class="title"><h3>Blueberry Lavender</h3></div>
+    <div class="desc"><p>Set of 20 cans</p></div>
+    </div>
+
+    <div class="gallery">
+        <a href="/">
+        <img src="logo.png" alt="Elderflower" width="600" height="700">
         </a>
     <div class="desc">Set of 20 cans</div>
     </div>
 
     <div class="gallery">
         <a href="/">
-        <img src="background.jpg" alt="Elderflower" width="600" height="800">
-        </a>
-    <div class="desc">Set of 20 cans</div>
-    </div>
-
-    <div class="gallery">
-        <a href="/">
-        <img src="background.jpg" alt="Cherry Blossom" width="600" height="800">
+        <img src="logo.png" alt="Cherry Blossom" width="600" height="700">
         </a>
     <div class="title"><h3>Cherry Blossom</h3></div>
     <div class="desc">Set of 20 cans</div>
     </div>
-
 </body>

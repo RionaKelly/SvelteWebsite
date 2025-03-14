@@ -12,7 +12,7 @@
 
 <style>
     footer {
-        background-image: linear-gradient(rgb(203, 113, 225), rgb(213, 143, 235), rgb(223, 153, 245), rgb(213, 143, 235), rgb(203, 113, 225));
+        background-image: linear-gradient(rgb(203, 123, 225), rgb(213, 143, 235), rgb(223, 153, 245), rgb(213, 143, 235), rgb(203, 123, 225));
         color: white;
         text-align: center;
         padding: 1rem;

@@ -22,7 +22,7 @@
         display: flex; /* Enables Flexbox */
         align-items: center; /* Vertically centers the items */
         justify-content: space-between; /* Pushes logo to left, nav to right */
-        background-image: linear-gradient(rgb(203, 113, 225), rgb(213, 143, 235), rgb(223, 153, 245), rgb(213, 143, 235), rgb(203, 113, 225));
+        background-image: linear-gradient(rgb(203, 123, 225), rgb(213, 143, 235), rgb(223, 153, 245), rgb(213, 143, 235), rgb(203, 123, 225));
         color: white;
         padding: 1rem;
     }

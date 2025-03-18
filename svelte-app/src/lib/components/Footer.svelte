@@ -16,17 +16,18 @@
         color: white;
         text-align: center;
         padding: 1rem;
-        position: fixed;
+        position: relative;
         bottom: 0;
         width: 100%;
     }
 
-    /*Mobile: Reduce padding for a more compact look 
+    /*Mobile: Reduce padding for a more compact look */
     @media (max-width: 768px) {
         footer {
             padding: 0.75rem;
             position: relative;
+            bottom: 0;
             font-size: 0.9rem;
         }
-    } */
+    }
 </style>

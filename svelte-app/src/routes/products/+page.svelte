@@ -14,69 +14,86 @@
 <h1>Products</h1>
 <p>Search</p>
 
+<div class="catalog">
+  <div class="catalog-item">
+    <a href="/">
+    <img src="grape.png" alt="Blueberry Lavender Tea Cans" width="600" height="400">
+    </a>
+    <div class="catalog-title"><h2>Blueberry Lavender</h2></div>
+    <div class="catalog-desc"><p>Set of 20 cans</p></div>
+    <div class="catalog-price"><h2>19.99€</h2></div>
+    <!-- Add to Cart Button -->
+  </div>
+  
+  <div class="catalog-item">
+    <a href="/">
+    <img src="doctor.png" alt="Elderflower" width="600" height="400">
+    </a>
+    <div class="catalog-title"><h2>Elderflower</h2></div>
+    <div class="catalog-desc">Set of 20 cans</div>
+    <div class="catalog-price"><h2>19.99€</h2></div>
+  </div>
+  
+  <div class="catalog-item">
+    <a href="/">
+    <img src="cherry-vanilla.png" alt="Cherry Blossom" width="600" height="400">
+    </a>
+    <div class="catalog-title"><h2>Cherry Blossom</h2></div>
+    <div class="catalog-desc">Set of 20 cans</div>
+    <div class="catalog-price"><h2>19.99€</h2></div>
+  </div>
+</div>
+
 
 <style>
 
-div.gallery {
-  margin: 20px;
-  border: 1px solid #df99f5;
-  background-color: #f2daf9;
-  float: left;
-  width: 450px;
-  padding: 5px;
+.catalog {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  justify-items: center;
+  
 }
 
-div.gallery:hover {
+.catalog img:hover {
   border: 1px solid #6a1e73;
 }
 
-div.gallery img {
-  width: 100%;
-  height: auto;
+.catalog img {
+  grid-area: image;
+  width: auto;
+  height: 500px;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #f0d5f8;
 }
 
-div.desc {
-  text-align: center;
-}
-
-div.title {
-  text-align: center;
-  padding: 1px;
-  text-decoration: none;
+.catalog-title {
+  grid-area: title;
   color: #6a1e73;
   font-weight: bold;
+  text-align: center;
+}
+
+.catalog-desc {
+  text-align: center;
+  grid-area: text;
+}
+
+.catalog-price {
+  text-align: center;
+  grid-area: text;
+  color: #df99f5;
 }
 
 @media (max-width: 768px) {
-  div.gallery {
-    flex-direction: column; /* Stacks items vertically */
-    text-align: center;
-    width: 230px;
+  .catalog {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 </style>
-<body>
-
-    <div class="gallery">
-        <a href="/">
-        <img src="Blueberry Lavender Iced Tea.jpg" alt="Blueberry Lavender Tea Cans" width="600" height="700">
-        </a>
-    <div class="title"><h3>Blueberry Lavender</h3></div>
-    <div class="desc"><p>Set of 20 cans</p></div>
-    </div>
-
-    <div class="gallery">
-        <a href="/">
-        <img src="logo.png" alt="Elderflower" width="600" height="700">
-        </a>
-    <div class="desc">Set of 20 cans</div>
-    </div>
-
-    <div class="gallery">
-        <a href="/">
-        <img src="logo.png" alt="Cherry Blossom" width="600" height="700">
-        </a>
-    <div class="title"><h3>Cherry Blossom</h3></div>
-    <div class="desc">Set of 20 cans</div>
-    </div>
-</body>

@@ -12,7 +12,7 @@
 </script>
 
 <h1>Products</h1>
-<p>Search</p>
+<p>Search Placeholder</p>
 
 <div class="catalog">
   <div class="catalog-item">
@@ -23,6 +23,7 @@
     <div class="catalog-desc"><p>Set of 20 cans</p></div>
     <div class="catalog-price"><h2>19.99€</h2></div>
     <!-- Add to Cart Button -->
+    <button class="cart">Add to Cart</button>
   </div>
   
   <div class="catalog-item">
@@ -32,6 +33,8 @@
     <div class="catalog-title"><h2>Elderflower</h2></div>
     <div class="catalog-desc">Set of 20 cans</div>
     <div class="catalog-price"><h2>19.99€</h2></div>
+    <!-- Add to Cart Button -->
+    <button class="cart">Add to Cart</button>
   </div>
   
   <div class="catalog-item">
@@ -41,12 +44,13 @@
     <div class="catalog-title"><h2>Cherry Blossom</h2></div>
     <div class="catalog-desc">Set of 20 cans</div>
     <div class="catalog-price"><h2>19.99€</h2></div>
+    <!-- Add to Cart Button -->
+    <button class="cart">Add to Cart</button>
   </div>
 </div>
 
 
 <style>
-
 .catalog {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -56,7 +60,6 @@
   margin-left: 2rem;
   margin-right: 2rem;
   justify-items: center;
-  
 }
 
 .catalog img:hover {
@@ -88,6 +91,10 @@
   text-align: center;
   grid-area: text;
   color: #df99f5;
+}
+
+.cart {
+  align-items: center;
 }
 
 @media (max-width: 768px) {

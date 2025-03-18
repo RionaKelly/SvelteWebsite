@@ -40,6 +40,10 @@
         margin-right: 10px;
     }
 
+    .logo img:hover {
+        width: 70px;
+}
+
     /* Mobile: Center logo and stack items */
     @media (max-width: 768px) {
         header {

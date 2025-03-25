@@ -26,14 +26,28 @@
 
     export let descriptionCherry = "Set of 20 cans. A perfectly balanced, delicate blend of cherry blossom flowers, leaves, and black tea. This is one of our most beloved tea blends, guaranteed to satisfy and delight tea lovers everywhere.";
     let expandedCherry = false;
+
+    let searchTerm = "";
+
+    function handleSearch() {
+      console.log("Searching for:", searchTerm);
+    }
 </script>
 
 <div class="page-title">
 <h1>Products</h1>
 </div>
 
-<div class="page-search">
-<p>Search . . .</p>
+<div class="search-container">
+  <input
+    type="text"
+    class="search-bar"
+    bind:value={searchTerm}
+    placeholder="Search . . ."
+  />
+  <button on:click={handleSearch} class="search-button">
+    Search
+  </button>
 </div>
 
 <div class="page-bg"></div>
@@ -137,6 +151,35 @@
   text-align: center;
 }
 
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #6a1e73;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.search-button {
+  padding: 10px 15px;
+  background-color: #df99f5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #6a1e73;
+}
+
+/*
 .page-search {
   grid-area: text;
   align-content: center;
@@ -149,6 +192,7 @@
   border-color: #6a1e73;
   border-radius: 15px;
 }
+*/
 
 .catalog {
   display: grid;
@@ -223,15 +267,29 @@
   border-radius: 15px;
 }
 
+@media (min-width: 1000px) {
+  .search-bar {
+  width: 700px;
+  }
+}
+
 @media (max-width: 1000px) {
   .catalog {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .search-bar {
+  width: 500px;
   }
 }
 
 @media (max-width: 700px) {
   .catalog {
     grid-template-columns: 1fr;
+  }
+
+  .search-bar {
+  width: 300px;
   }
 }
 </style>

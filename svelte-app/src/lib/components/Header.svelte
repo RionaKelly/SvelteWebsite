@@ -44,7 +44,7 @@
 
     .logo img:hover {
         width: 48px;
-        margin-right: 12px;
+        margin-right: 13px;
         opacity: 0.9;
         margin-left: 1px;
 }

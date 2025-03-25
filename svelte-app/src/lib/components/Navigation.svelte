@@ -31,21 +31,27 @@
         display: flex;
         justify-content: center;
         gap: 20px;
+        transition: 0.15s ease-in-out;
     }
 
     .nav ul li {
         display: inline-block;
+        transition: 0.15s ease-in-out;
     }
 
     .nav ul li a {
         text-decoration: none;
         color: white;
         font-weight: bold;
+        opacity: 1;
+        transition: 0.15s ease-in-out;
     }
-     .nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
+    .nav ul li a:hover {
+        opacity: 0.9;
+        text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+    }
+    .nav ul li:hover {
+        transform: translateY(1px);
     }
 
     /* 🍔 Burger Menu (Hidden on Large Screens) */

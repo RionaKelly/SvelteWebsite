@@ -8,9 +8,11 @@ export { default as NavigationFooter } from "./components/NavigationFooter.svelt
 // @ts-ignore
 export { default as Footer } from "./components/Footer.svelte";
 // @ts-ignore
+export { default as FooterFixed } from "./components/FooterFixed.svelte";
+// @ts-ignore
 export { default as Card } from "./components/Navigation.svelte";
 // @ts-ignore
 export { default as Modal } from "./components/Modal.svelte";
 
 // @ts-ignore
-import {Header, Navigation, NavigationFooter, Footer, Card, Modal} from "$lib";
+import {Header, Navigation, NavigationFooter,Footer, FooterFixed, Card, Modal} from "$lib";

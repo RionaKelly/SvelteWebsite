@@ -33,11 +33,11 @@
         transition: 0.15s ease-in-out;
     }
 
-    .nav ul li a:hover {
+    nav ul li a:hover {
         opacity: 0.9;
         text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
     }
-    .nav ul li:hover {
+    nav ul li:hover {
         transform: translateY(1px);
     }
 </style>

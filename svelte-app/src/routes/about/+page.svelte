@@ -10,10 +10,10 @@
     })
 </script>
 
+<div class="page-bg"></div>
+
 <h1>Welcome to our Website</h1>
 <p>This is a temporary about page.</p>
-     
-<div class="page-bg"></div>
 
 <style>
 
@@ -24,6 +24,7 @@
   width: 100%;
   height: 100%;
   z-index: -10;
+  opacity: 60%;
   background-image: url("/bg-william-morris.jpg");
   background-size: cover;
   background-position: center;

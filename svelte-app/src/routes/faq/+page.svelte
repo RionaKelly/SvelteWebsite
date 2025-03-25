@@ -9,6 +9,7 @@
         console.log("FAQ Page Loaded");
     })
 </script>
+<div class="page-bg"></div>
 
 <h1>Frequently Asked Questions (FAQ)</h1>
 <p>Have any questions about our company? Here you will find the answer to the most common questions that we get asked. If your question has not been answered here, feel free to contact us here or at the footer below.</p>
@@ -25,8 +26,6 @@
 <b>- What is your return policy?</b>
 <p>- We do not offer refunds.</p>
 <br>
-
-<div class="page-bg"></div>
      
 <style>
 
@@ -37,6 +36,7 @@
   width: 100%;
   height: 100%;
   z-index: -10;
+  opacity: 60%;
   background-image: url("/bg-william-morris.jpg");
   background-size: cover;
   background-position: center;

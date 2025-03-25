@@ -18,60 +18,97 @@
     let addedElderflower = false;
     let addedCherry = false;
 
-    export let description = "Set of 20 cans. Sip, refresh and nourish your skin from the inside out. This hydrating, violet-hued herbal infusion contains a proprietary blend of botanicals that can help improve your skin complexion.";
-    let expanded = false;
+    export let descriptionBlueberry = "Set of 20 cans. Sip, refresh and nourish your skin from the inside out. This hydrating, violet-hued herbal infusion contains a proprietary blend of botanicals that can help improve your skin complexion.";
+    let expandedBlueberry = false;
+
+    export let descriptionElderflower = "Set of 20 cans. Feel uplifted with the expertly blended Elderflower and berries tea. Nature's answer to keep the chills away, this reviving herbal tea creates a fruity blend with delicate floral and aromatic notes.";
+    let expandedElderflower = false;
+
+    export let descriptionCherry = "Set of 20 cans. A perfectly balanced, delicate blend of cherry blossom flowers, leaves, and black tea. This is one of our most beloved tea blends, guaranteed to satisfy and delight tea lovers everywhere.";
+    let expandedCherry = false;
 </script>
 
+<div class="page-title">
 <h1>Products</h1>
-<p>Search Placeholder</p>
+</div>
+
+<div class="page-search">
+<p>Search . . .</p>
+</div>
 
 <div class="page-bg"></div>
 
 <div class="catalog">
   <div class="catalog-item">
+    <div class="catalog-title">
     <a href="/">
     <img src="grape.png" alt="Blueberry Lavender Tea Cans" width="600" height="400">
     </a>
-    <div class="catalog-title"><h2>Blueberry Lavender</h2></div>
+    <h2>Blueberry Lavender</h2>
+    </div>
     <!-- Description Button -->
     <div class="catalog-desc">
-      <p>{expanded ? description : description.substring(0, 15) + ". . ."}</p>
-      <button on:click={() => expanded = !expanded}>
-        {expanded ? "Read Less" : "Read More"}
+      <p>{expandedBlueberry ? descriptionBlueberry : descriptionBlueberry.substring(0, 15) + ". . ."}</p>
+      <button class="read" on:click={() => expandedBlueberry = !expandedBlueberry}>
+        {expandedBlueberry ? "Read Less" : "Read More"}
       </button>
     </div>
     <!-- Price -->
     <div class="catalog-price"><h2>19.99€</h2></div>
     <!-- Add to Cart Button -->
+    <div class="catalog-desc">
     <button class="cart" on:click={() => addedBlueberry = !addedBlueberry}>
       {addedBlueberry ? "Successfully Added!" : "Add to Cart"}
     </button>
+    </div>
   </div>
   
   <div class="catalog-item">
+    <div class="catalog-title">
     <a href="/">
     <img src="doctor.png" alt="Elderflower" width="600" height="400">
     </a>
-    <div class="catalog-title"><h2>Elderflower</h2></div>
-    <div class="catalog-desc">Set of 20 cans</div>
+    <h2>Elderflower</h2>
+    </div>
+    <!-- Description Button -->
+    <div class="catalog-desc">
+      <p>{expandedElderflower ? descriptionElderflower : descriptionElderflower.substring(0, 15) + ". . ."}</p>
+      <button class="read" on:click={() => expandedElderflower = !expandedElderflower}>
+        {expandedElderflower ? "Read Less" : "Read More"}
+      </button>
+    </div>
+    <!-- Price -->
     <div class="catalog-price"><h2>19.99€</h2></div>
     <!-- Add to Cart Button -->
+    <div class="catalog-desc">
     <button class="cart" on:click={() => addedElderflower = !addedElderflower}>
       {addedElderflower ? "Successfully Added!" : "Add to Cart"}
     </button>
+    </div>
   </div>
   
   <div class="catalog-item">
+    <div class="catalog-title">
     <a href="/">
     <img src="cherry-vanilla.png" alt="Cherry Blossom" width="600" height="400">
     </a>
-    <div class="catalog-title"><h2>Cherry Blossom</h2></div>
-    <div class="catalog-desc">Set of 20 cans</div>
+    <h2>Cherry Blossom</h2>
+    </div>
+    <!-- Description Button -->
+    <div class="catalog-desc">
+      <p>{expandedCherry ? descriptionCherry : descriptionCherry.substring(0, 15) + ". . ."}</p>
+      <button class="read" on:click={() => expandedCherry = !expandedCherry}>
+        {expandedCherry ? "Read Less" : "Read More"}
+      </button>
+    </div>
+    <!-- Price -->
     <div class="catalog-price"><h2>19.99€</h2></div>
     <!-- Add to Cart Button -->
+    <div class="catalog-desc">
     <button class="cart" on:click={() => addedCherry = !addedCherry}>
       {addedCherry ? "Successfully Added!" : "Add to Cart"}
     </button>
+    </div>
   </div>
 </div>
       
@@ -83,11 +120,34 @@
   width: 100%;
   height: 100%;
   z-index: -10;
+  opacity: 60%;
   background-image: url("/bg-william-morris.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   pointer-events: none;
+}
+
+.page-title {
+  grid-area: title;
+  padding: 13px;
+  color: #6a1e73;
+  font-weight: bold;
+  font-size: 45px;
+  text-align: center;
+}
+
+.page-search {
+  grid-area: text;
+  align-content: center;
+  text-align: left;
+  padding: 2px 12px;
+  max-width: 900px;
+  font-size: 20px;
+  color: rgb(255, 255, 255, 0.8);
+  background-color: #df99f5;
+  border-color: #6a1e73;
+  border-radius: 15px;
 }
 
 .catalog {
@@ -133,7 +193,7 @@
 .catalog-price {
   text-align: center;
   grid-area: text;
-  color: #df99f5;
+  color: #d489eb;
   font-size: 20px;
 }
 
@@ -151,6 +211,16 @@
 .cart:hover {
   transform: translateY(-1px);
   box-shadow: 0 6px 15px #e5beeb;
+}
+
+.read {
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 13px;
+  color: #333333;
+  background-color: rgb(108, 31, 117, 0.05);
+  border-color: #edc7f8;
+  border-radius: 15px;
 }
 
 @media (max-width: 1000px) {

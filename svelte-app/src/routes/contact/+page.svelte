@@ -41,6 +41,7 @@
   width: 100%;
   height: 100%;
   z-index: -10;
+  opacity: 60%;
   background-image: url("/bg-william-morris.jpg");
   background-size: cover;
   background-position: center;

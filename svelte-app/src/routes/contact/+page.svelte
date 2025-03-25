@@ -10,6 +10,7 @@
     })
 </script>
 
+<div class="page-bg"></div>
 
 <div class="rectangle top"><h1>CONTACT US</h1></div>
 
@@ -30,20 +31,22 @@
     <br>
     </div>
 
-<img src="background.jpg" class="background-image" alt="Background Image">
-      
+     
 <style>
 
-img.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* makes sure the image covers the full screen */
-    z-index: -1; /* Puts the image behind any other content */
-        }
-
+.page-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background-image: url("/bg-william-morris.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
 
 body {
   margin: 0;

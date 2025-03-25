@@ -26,12 +26,29 @@
 <p>- We do not offer refunds.</p>
 <br>
 
+<div class="page-bg"></div>
+     
 <style>
-    @media (max-width: 7px) {
-        footer {
-            padding: 0.75rem;
-            position: relative;
-            font-size: 0.9rem;
-        }
+
+.page-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background-image: url("/bg-william-morris.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+@media (max-width: 7px) {
+    footer {
+        padding: 0.75rem;
+        position: relative;
+        font-size: 0.9rem;
     }
+}
 </style>

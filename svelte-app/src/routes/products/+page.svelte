@@ -74,10 +74,8 @@
     </button>
   </div>
 </div>
-
-
+      
 <style>
-
 .page-bg {
   position: fixed;
   top: 0;
@@ -85,7 +83,7 @@
   width: 100%;
   height: 100%;
   z-index: -10;
-  background-image: url("/background.jpg");
+  background-image: url("/bg-william-morris.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

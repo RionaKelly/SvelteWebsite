@@ -14,6 +14,12 @@
       };
     });
 
+    let addedBlueberry = false;
+    let addedElderflower = false;
+    let addedCherry = false;
+
+    export let description = "Set of 20 cans. Sip, refresh and nourish your skin from the inside out. This hydrating, violet-hued herbal infusion contains a proprietary blend of botanicals that can help improve your skin complexion.";
+    let expanded = false;
 </script>
 
 <h1>Products</h1>
@@ -27,10 +33,19 @@
     <img src="grape.png" alt="Blueberry Lavender Tea Cans" width="600" height="400">
     </a>
     <div class="catalog-title"><h2>Blueberry Lavender</h2></div>
-    <div class="catalog-desc"><p>Set of 20 cans</p></div>
+    <!-- Description Button -->
+    <div class="catalog-desc">
+      <p>{expanded ? description : description.substring(0, 15) + ". . ."}</p>
+      <button on:click={() => expanded = !expanded}>
+        {expanded ? "Read Less" : "Read More"}
+      </button>
+    </div>
+    <!-- Price -->
     <div class="catalog-price"><h2>19.99€</h2></div>
     <!-- Add to Cart Button -->
-    <button class="cart">Add to Cart</button>
+    <button class="cart" on:click={() => addedBlueberry = !addedBlueberry}>
+      {addedBlueberry ? "Successfully Added!" : "Add to Cart"}
+    </button>
   </div>
   
   <div class="catalog-item">
@@ -41,7 +56,9 @@
     <div class="catalog-desc">Set of 20 cans</div>
     <div class="catalog-price"><h2>19.99€</h2></div>
     <!-- Add to Cart Button -->
-    <button class="cart"> Add to Cart </button>
+    <button class="cart" on:click={() => addedElderflower = !addedElderflower}>
+      {addedElderflower ? "Successfully Added!" : "Add to Cart"}
+    </button>
   </div>
   
   <div class="catalog-item">
@@ -52,7 +69,9 @@
     <div class="catalog-desc">Set of 20 cans</div>
     <div class="catalog-price"><h2>19.99€</h2></div>
     <!-- Add to Cart Button -->
-    <button class="cart"> Add to Cart </button>
+    <button class="cart" on:click={() => addedCherry = !addedCherry}>
+      {addedCherry ? "Successfully Added!" : "Add to Cart"}
+    </button>
   </div>
 </div>
 
@@ -89,6 +108,7 @@
 }
 
 .catalog img {
+  align-items: center;
   grid-area: image;
   width: auto;
   height: 500px;
@@ -108,8 +128,8 @@
 
 .catalog-desc {
   text-align: center;
+  align-items: center;
   grid-area: text;
-
 }
 
 .catalog-price {
@@ -121,7 +141,7 @@
 
 .cart {
   align-items: center;
-  padding: 8px 16px;
+  padding: 7px 16px;
   font-size: 20px;
   color: #ffffff;
   background-color: #df99f5;

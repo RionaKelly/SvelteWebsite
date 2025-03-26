@@ -10,6 +10,7 @@
     })
 </script>
 
+<body> 
 <div class="page-bg"></div>
 
 <div class="rectangle top"><h1>CONTACT US</h1></div>
@@ -31,6 +32,7 @@
     <br>
     </div>
 
+    </body>
      
 <style>
 

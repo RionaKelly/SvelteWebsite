@@ -10,12 +10,31 @@
     })
 </script>
 
+<body>
+
 <div class="page-bg"></div>
+
+
+<div class="image-container">
+    <img src="cat.png" alt="cat">
+    <img src="cat.png" alt="cat">
+    <img src="cat.png" alt="cat">
+</div>
 
 <h1>404</h1>
 <p>PAGE NOT FOUND</p>
 
+</body>
+
 <style>
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
 
 .page-bg {
   position: fixed;
@@ -31,4 +50,20 @@
   background-repeat: no-repeat;
   pointer-events: none;
 }
+
+.image-container {
+  display: flex;
+}
+
+.image-container img {
+  width: 650px; 
+  height: 650px;
+  margin-right: 10px; 
+  opacity: 0.6; /* Reduces transparency to 60% */
+}
+
+.image-container img:last-child {
+  margin-right: 0; 
+}
+
 </style>

@@ -16,7 +16,7 @@
         color: white;
         text-align: center;
         padding: 1rem;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         width: 100%;
     }
@@ -25,7 +25,7 @@
     @media (max-width: 768px) {
         footer {
             padding: 0.75rem;
-            position: relative;
+            position: fixed;
             bottom: 0;
             font-size: 0.9rem;
         }

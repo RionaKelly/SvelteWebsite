@@ -14,6 +14,8 @@
 
 <div class="page-bg"></div>
 
+<h1>404</h1>
+<p>PAGE NOT FOUND</p>
 
 <div class="image-container">
     <img src="cat.png" alt="cat">
@@ -21,20 +23,9 @@
     <img src="cat.png" alt="cat">
 </div>
 
-<h1>404</h1>
-<p>PAGE NOT FOUND</p>
-
 </body>
 
 <style>
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
 
 .page-bg {
   position: fixed;
@@ -53,12 +44,14 @@ body {
 
 .image-container {
   display: flex;
+  width: auto;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  max-height: 600px; 
 }
 
 .image-container img {
-  width: 650px; 
-  height: 650px;
-  margin-right: 10px; 
   opacity: 0.6; /* Reduces transparency to 60% */
 }
 

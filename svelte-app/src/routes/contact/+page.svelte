@@ -69,7 +69,9 @@ body {
   transform: translateY(-50%);
   width: 300px; 
   height: 250px;  
-  background-color: #a83cc4;
+  background-color: #c458df;
+  border: 1px solid #6a1e73;
+  border-radius: 4px;
 }
 
 .top {
@@ -89,7 +91,9 @@ body {
   transform: translateY(-50%);
   width: 300px; 
   height: 300px;  
-  background-color: #dd98ee;
+  background-color: #f0c9fa;
+  border: 1px solid #6a1e73;
+  border-radius: 4px;
 }
 
 h1 {

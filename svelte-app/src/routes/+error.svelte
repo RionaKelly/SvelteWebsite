@@ -18,14 +18,27 @@
 <p>PAGE NOT FOUND</p>
 
 <div class="image-container">
-    <img src="cat.png" alt="cat">
-    <img src="cat.png" alt="cat">
-    <img src="cat.png" alt="cat">
+  <img src="cat.png" alt="cat">
+  <img src="cat.png" alt="cat">
+  <img src="cat.png" alt="cat">
 </div>
 
 </body>
 
 <style>
+
+h1{
+  font-size: 140px;
+  margin-left: 44%;
+  margin-top: 10%;
+  
+}
+
+p{
+  font-size: 20px;
+  margin-left: 45%;
+  
+}
 
 .page-bg {
   position: fixed;
@@ -44,14 +57,12 @@
 
 .image-container {
   display: flex;
-  width: auto;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-  max-height: 600px; 
 }
 
 .image-container img {
+  width: 650px; 
+  height: 650px;
+  margin-right: 10px; 
   opacity: 0.6; /* Reduces transparency to 60% */
 }
 

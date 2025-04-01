@@ -170,6 +170,7 @@
 
 .search-button:hover {
   background-color: #6a1e73;
+  cursor: pointer;
 }
 
 .catalog {
@@ -228,11 +229,13 @@
   border-color: #6a1e73;
   border-radius: 15px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .cart:hover {
   transform: translateY(-1px);
   box-shadow: 0 6px 15px #e5beeb;
+  cursor: pointer;
 }
 
 .read {
@@ -243,6 +246,7 @@
   background-color: rgb(108, 31, 117, 0.05);
   border-color: #edc7f8;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 @media (min-width: 1000px) {

@@ -131,7 +131,7 @@
 
                 <!-- User must enter the details below to log in -->
                 <input type="email" placeholder="Email" bind:value={user.email} required/>
-                <input type="text" placeholder="Password" bind:value={logInPassword} required/> 
+                <input type="password" placeholder="Password" bind:value={logInPassword} required/> 
               
                 {#if isSignedUp}
                     <button on:click={handleSignUp}>Create Account</button>
@@ -144,17 +144,32 @@
         </div>
     {:else}
         <div class="account-details">
-            <div class="profile-icon">
-                <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
-                </svg>
-            </div>
-            <h1>Account Details</h1>
-            <h2>Hello, {user.name}!</h2>
-            <p>Welcome to your Lilac profile.</p>
             <div class="user-info">
+                <h2>Account Details</h2>
                 <p><strong>Name:</strong> {user.name}</p>
                 <p><strong>Email:</strong> {user.email}</p>
+                {#if user.phoneNumber}
+                    <p><strong>Phone Number:</strong> {user.phoneNumber}</p>
+                {/if}
+                {#if user.address}
+                    <p><strong>Address:</strong> {user.address}</p>
+                {/if}
+            </div>
+            <div class="order-history">
+                <h2>Order History</h2>
+                <p>You haven't placed any orders yet.</p>
+            </div>
+            <div class="profile">
+                <div class="profile-icon">
+                    <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                    </svg>
+                </div>
+                <h1>Hello, {user.name}!</h1>
+                <div class="welcome">
+                    <p>Welcome to your Lilac profile.</p>
+                </div>
+                <button on:click={handleLogOut}>Sign Out</button>
             </div>
         </div>
     {/if}
@@ -175,6 +190,112 @@
   background-position: center;
   background-repeat: no-repeat;
   pointer-events: none;
+}
+
+.info-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.authentication-container, .account-details {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: auto;
+    padding: 30px;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.authentication-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.authentication-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6a1e73;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.account-details button {
+    width: 150px;
+    align-items: center;
+    padding: 7px 16px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #df99f5;
+    border-color: #6a1e73;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.authentication-box button:hover {
+    background-color: #d27cec;
+    cursor: pointer;
+}
+
+.account-details button:hover {
+    background-color: #6a1e73;
+    cursor: pointer;
+}
+
+.authentication-box p span {
+    color: #6a1e73;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.profile {
+    border-radius: 8px;
+    width: 100%;
+    max-width: auto;
+    padding: 30px;
+    text-align: center;
+    align-items: right;
+    justify-content: right;
+}
+
+.profile-icon {
+    background-color: #6a1e73;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    justify-content: right;
+    align-items: right;
+    margin: 0 auto 20px;
+    display: flex;
+}
+
+.welcome {
+    color: #6a1e73;
+}
+
+.account-details {
+    align-items: center;
+    justify-content: left;
+    display: flex;
+}
+
+.order-history {
+    align-items: right;
+    justify-content: center;
 }
 
 </style>

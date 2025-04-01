@@ -4,18 +4,39 @@
 
 <script>
     import { onMount } from 'svelte';
-
     onMount(() => {
         console.log("Landing Page Loaded");
     })
+
+     import Carousel from 'svelte-carousel';
+  import { browser } from '$app/environment';
+
+  let carousel; // for calling methods of the carousel instance
+  
+  const handleNextClick = () => {
+    carousel.goToNext()
+  }
 </script>
 
 <div class="page-bg"></div>
 
+<h1>Welcome to Lilac</h1>
+ <p>We produce affordable Herbal Tea as a fun and stylish alternative to other expensive health drinks</p>
+ <br>
+ <h1><a href="/products">Our Products</a></h1>
 
-<h1>Welcome to our Website</h1>
-<p>This is a temporary landing page.</p>
-    
+ <Carousel
+    bind:this={carousel}
+    autoplay
+    autoplayDuration={5000}
+    autoplayProgressVisible
+    pauseOnFocus
+  >
+     <div>Blueberry Lavender</div>
+     <div>Elderflower</div>
+     <div>Cherry Blossom</div>
+ </Carousel>
+ <!-- <button on:click={handleNextClick}>Next</button> -->
 
 <style>
 
@@ -34,4 +55,10 @@
   pointer-events: none;
 }
 
+:root {
+    --primary-color: #303030;
+    --background-color: #fdf5ff;
+    --text-color: #303030;
+    --link-hover-color: #6a1e73;
+}
 </style>

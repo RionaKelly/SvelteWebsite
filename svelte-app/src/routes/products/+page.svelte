@@ -39,15 +39,8 @@
 </div>
 
 <div class="search-container">
-  <input
-    type="text"
-    class="search-bar"
-    bind:value={searchTerm}
-    placeholder="Search . . ."
-  />
-  <button on:click={handleSearch} class="search-button">
-    Search
-  </button>
+  <input type="text" class="search-bar" bind:value={searchTerm} placeholder="Search . . ."/>
+  <button on:click={handleSearch} class="search-button">Search</button>
 </div>
 
 <div class="page-bg"></div>
@@ -178,21 +171,6 @@
 .search-button:hover {
   background-color: #6a1e73;
 }
-
-/*
-.page-search {
-  grid-area: text;
-  align-content: center;
-  text-align: left;
-  padding: 2px 12px;
-  max-width: 900px;
-  font-size: 20px;
-  color: rgb(255, 255, 255, 0.8);
-  background-color: #df99f5;
-  border-color: #6a1e73;
-  border-radius: 15px;
-}
-*/
 
 .catalog {
   display: grid;

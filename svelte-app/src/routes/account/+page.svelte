@@ -19,6 +19,7 @@
     
     // Sign Up Details
     let isSignedUp = false;
+    let isValid = false;
 
     // Check if user is already signed in
     onMount(() => {
@@ -43,7 +44,6 @@
         }
 
          // Validation
-        let isValid = false;
         function validateEmail() {
             const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             isValid = regex.test(user.email);
@@ -98,19 +98,63 @@
         }
     }
 
+    function handleLogOut() {
+        isLoggedIn = false;
+        user = {
+            name: '',
+            email: '',
+            phoneNumber: '',
+            address: ''
+        };
+        logInEmail = '';
+        logInPassword = '';
+        localStorage.removeItem('lilacUser');
+        localStorage.removeItem('lilacUserPassword');
+    }
+
 </script>
 
 <div class="page-bg"></div>
 
-<!--
-<h1>Hello, User!</h1>
-<p>Welcome to your Lilac profile. (placeholder)</p> -->
-
+<!-- Sign In/Log In Block -->
 <main class="info-block">
     {#if !isLoggedIn}
         <div class="authentication-container">
             <div class="authentication-box">
+                <h2>{isSignedUp ? 'Sign Up' : 'Log In'}</h2>
 
+                {#if isSignedUp}
+                    <input type="text" placeholder="Full Name" bind:value={user.name}/>
+                    <input type="tel" placeholder="Phone Number" bind:value={user.phoneNumber}/>
+                    <input type="text" placeholder="Address" bind:value={user.address}/>
+                {/if}
+
+                <!-- User must enter the details below to log in -->
+                <input type="email" placeholder="Email" bind:value={user.email} required/>
+                <input type="text" placeholder="Password" bind:value={logInPassword} required/> 
+              
+                {#if isSignedUp}
+                    <button on:click={handleSignUp}>Create Account</button>
+                    <p>Already have an account? <span on:click={() => isSignedUp = false}>Log In</span></p>
+                {:else}
+                    <button on:click={handleLogIn}>Log In</button>
+                    <p>Don't have an account? <span on:click={() => isSignedUp = true}>Sign Up</span></p>
+                {/if}              
+            </div>
+        </div>
+    {:else}
+        <div class="account-details">
+            <div class="profile-icon">
+                <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                </svg>
+            </div>
+            <h1>Account Details</h1>
+            <h2>Hello, {user.name}!</h2>
+            <p>Welcome to your Lilac profile.</p>
+            <div class="user-info">
+                <p><strong>Name:</strong> {user.name}</p>
+                <p><strong>Email:</strong> {user.email}</p>
             </div>
         </div>
     {/if}

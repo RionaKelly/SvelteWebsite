@@ -3,6 +3,27 @@
 </head>
 
 <script>
+  import { onMount } from 'svelte';
+  import { browser } from '$app/environment';
+
+  /**
+ * @type {__sveltets_2_IsomorphicComponent<__sveltets_2_PropsWithChildren<{ timingFunction?: string | undefined; arrows?: boolean | undefined; infinite?: boolean | undefined; initialPageIndex?: number | undefined; duration?: number | undefined; autoplay?: boolean | undefined; autoplayDuration?: number | undefined; autoplayDirection?: any; pauseOnFocus?: boolean | undefined; autoplayProgressVisible?: boolean | undefined; dots?: boolean | undefined; swiping?: boolean | undefined; particlesToShow?: number | undefined; particlesToScroll?: number | undefined; goTo?: ((pageIndex: any, options: any) => Promise<void>) | undefined; goToPrev?: ((options: any) => Promise<void>) | undefined; goToNext?: ((options: any) => Promise<void>) | undefined; }, { prev: { showPrevPage: any; }; default: { loaded: any[]; currentPageIndex: any; }; next: { showNextPage: any; }; dots: { currentPageIndex: any; pagesCount: number; showPage: (pageIndex: any) => Promise<void>; }; }>, { [evt: string]: CustomEvent<any>; }, { prev: { showPrevPage: any; }; default: { loaded: any[]; currentPageIndex: any; }; next: { showNextPage: any; }; dots: { currentPageIndex: any; pagesCount: number; showPage: (pageIndex: any) => Promise<void>; }; }, { goTo: (pageIndex: any, options: any) => Promise<void>; goToPrev: (options: any) => Promise<void>; goToNext: (options: any) => Promise<void>; }, string>}
+ */
+  let Carousel; // for dynamic import of the carousel component
+  /* @type {import('svelte-carousel').default} */
+  let carousel; // for calling methods of the carousel instance
+  
+  onMount(async () => {
+      console.log("Home Page Loaded");
+      if (browser) {
+          // dynamically import only in the browser
+          const module = await import('svelte-carousel');
+          Carousel = module.default;
+      }
+  });
+</script>
+
+<!--<script>
     import { onMount } from 'svelte';
     onMount(() => {
         console.log("Landing Page Loaded");
@@ -16,7 +37,7 @@
   const handleNextClick = () => {
     carousel.goToNext()
   }
-</script>
+</script>-->
 
 <div class="page-bg"></div>
 
@@ -25,18 +46,22 @@
  <br>
  <h1><a href="/products">Our Products</a></h1>
 
+ {#if Carousel}
  <Carousel
-    bind:this={carousel}
-    autoplay
-    autoplayDuration={5000}
-    autoplayProgressVisible
-    pauseOnFocus
-  >
+     bind:this={carousel}
+     autoplay
+     autoplayDuration={5000}
+     autoplayProgressVisible
+     pauseOnFocus
+ >
      <div>Blueberry Lavender</div>
      <div>Elderflower</div>
      <div>Cherry Blossom</div>
  </Carousel>
- <!-- <button on:click={handleNextClick}>Next</button> -->
+{:else}
+ <!-- Fallback content while loading -->
+ <p>Loading carousel...</p>
+{/if}
 
 <style>
 

@@ -59,9 +59,6 @@
             }
         }
 
-        // Update user email for sign up
-        user.email = logInEmail;
-
         // Store User Details
         localStorage.setItem('lilacUser', JSON.stringify(user));
         localStorage.setItem('lilacUserPassword', logInPassword);
@@ -76,13 +73,13 @@
         const storedPassword = localStorage.getItem('lilacUserPassword');
 
         if (!logInEmail) {
-            alert('Please enter an email!');
-            return;
-        }
+                alert('Please enter an email!');
+                return;
+            }
 
-        if (!logInPassword) {
-            alert('Please enter a password!');
-            return;
+            if (!logInPassword) {
+                alert('Please enter a password!');
+                return;
         }
 
         if (storedUser && storedPassword) {
@@ -145,8 +142,9 @@
     {:else}
         <div class="account-details">
             <div class="user-info">
-                <h2>Account Details</h2>
-                <p><strong>Name:</strong> {user.name}</p>
+                <h1>Account Details</h1>
+                <div class="details-text">
+                    <p><strong>Name:</strong> {user.name}</p>
                 <p><strong>Email:</strong> {user.email}</p>
                 {#if user.phoneNumber}
                     <p><strong>Phone Number:</strong> {user.phoneNumber}</p>
@@ -154,10 +152,13 @@
                 {#if user.address}
                     <p><strong>Address:</strong> {user.address}</p>
                 {/if}
-            </div>
-            <div class="order-history">
-                <h2>Order History</h2>
-                <p>You haven't placed any orders yet.</p>
+                </div>
+                <div class="order-history">
+                    <h1>Order History</h1>
+                    <div class="details-text">
+                        <p>You haven't placed any orders yet.</p>
+                    </div>
+                </div>
             </div>
             <div class="profile">
                 <div class="profile-icon">
@@ -165,11 +166,11 @@
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
                     </svg>
                 </div>
-                <h1>Hello, {user.name}!</h1>
+                <h1>Hello, <strong>{user.name}</strong>!</h1>
                 <div class="welcome">
                     <p>Welcome to your Lilac profile.</p>
+                    <button on:click={handleLogOut}>Sign Out</button>
                 </div>
-                <button on:click={handleLogOut}>Sign Out</button>
             </div>
         </div>
     {/if}
@@ -219,6 +220,7 @@
     margin: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+
 }
 
 .authentication-box button {
@@ -264,6 +266,7 @@
 
 .profile {
     border-radius: 8px;
+    font-size: 20px;
     width: 100%;
     max-width: auto;
     padding: 30px;
@@ -278,10 +281,10 @@
     height: 200px;
     border-radius: 50%;
     justify-content: right;
-    align-items: right;
+    align-items: center;
     margin: 0 auto 20px;
-    display: flex;
 }
+
 
 .welcome {
     color: #6a1e73;
@@ -290,12 +293,25 @@
 .account-details {
     align-items: center;
     justify-content: left;
-    display: flex;
+    padding-left: 30px;
+    max-width: 900px;
+    column-count: 2;
+}
+
+.user-info {
+    text-align: left;
+    padding-top: 20px;
 }
 
 .order-history {
+    padding-top: 30px;
     align-items: right;
     justify-content: center;
 }
 
+.details-text {
+    background-color: #f5dafd;
+    color: #6a1e73;
+    padding: 10px;
+}
 </style>

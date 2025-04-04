@@ -13,6 +13,8 @@
 <body> 
 <div class="page-bg"></div>
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 <div class="rectangle top"><h1>CONTACT US</h1></div>
 
 <div class="rectangle right"><h2>SEND US A MESSAGE</h2><br>

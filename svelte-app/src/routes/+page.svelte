@@ -23,45 +23,34 @@
   });
 </script>
 
-<!--<script>
-    import { onMount } from 'svelte';
-    onMount(() => {
-        console.log("Landing Page Loaded");
-    })
-
-     import Carousel from 'svelte-carousel';
-  import { browser } from '$app/environment';
-
-  let carousel; // for calling methods of the carousel instance
-  
-  const handleNextClick = () => {
-    carousel.goToNext()
-  }
-</script>-->
-
 <div class="page-bg"></div>
 
 <h1>Welcome to Lilac</h1>
- <p>We produce affordable Herbal Tea as a fun and stylish alternative to other expensive health drinks</p>
- <br>
- <h1><a href="/products">Our Products</a></h1>
+<p>Here at Lilac Tea, we produce affordable Herbal Tea as a fun and stylish alternative to other expensive health drinks currently on the market. </p>
 
- {#if Carousel}
+ <div class="carousel">{#if Carousel}
  <Carousel
      bind:this={carousel}
      autoplay
      autoplayDuration={5000}
      autoplayProgressVisible
      pauseOnFocus
+     swiping
  >
-     <div>Blueberry Lavender</div>
-     <div>Elderflower</div>
-     <div>Cherry Blossom</div>
+     <div><center>
+      <img src="grape.png" alt="Blueberry Lavender Tea Cans" width="300" height="200">
+      <h2>Blueberry Lavender</h2></center></div>
+     <div><center>
+      <img src="doctor.png" alt="Elderflower" width="300" height="200">
+      <h2>Elderflower</h2></center></div>
+     <div><center>
+      <img src="cherry-vanilla.png" alt="Cherry Blossom" width="300" height="200">
+      <h2>Cherry Blossom</h2></center></div>
  </Carousel>
 {:else}
  <!-- Fallback content while loading -->
  <p>Loading carousel...</p>
-{/if}
+{/if}</div>
 
 <style>
 
@@ -80,10 +69,23 @@
   pointer-events: none;
 }
 
-:root {
-    --primary-color: #303030;
-    --background-color: #fdf5ff;
-    --text-color: #303030;
-    --link-hover-color: #6a1e73;
+h1 {
+  grid-area: title;
+  padding: 13px;
+  color: #6a1e73;
+  font-weight: bold;
+  font-size: 72px;
+  text-align: left;
+}
+
+p {
+  padding: 13px;
+  font-size: 18px;
+}
+
+.carousel {
+  max-width: 800px;
+  margin: auto;
+  align-items: center;
 }
 </style>

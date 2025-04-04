@@ -21,11 +21,13 @@
 <p>- We are located in Tea City, Tea Land.</p>
 <br>
 <b>- How long does shipping take?</b>
-<p>- Shipping times will depend on your location, shipping to Ireland should be completed in 3-4 business days.</p>
+<p>- Shipping times will depend on your location, shipping to Ireland should be completed in 7 business days.</p>
 <br>
 <b>- What is your return policy?</b>
 <p>- We do not offer refunds.</p>
 <br>
+<b>- How long did this website take to make?</b>
+<p>- Quite a while :(</p>
      
 <style>
 
@@ -42,6 +44,25 @@
   background-position: center;
   background-repeat: no-repeat;
   pointer-events: none;
+}
+
+h1 {
+  grid-area: title;
+  padding: 13px;
+  color: #6a1e73;
+  font-weight: bold;
+  font-size: 72px;
+  text-align: left;
+}
+
+p {
+  padding: 13px;
+  font-size: 18px;
+}
+b {
+  color: #6a1e73;
+  padding: 13px;
+  font-size: 18px;
 }
 
 @media (max-width: 7px) {

@@ -13,7 +13,7 @@
 <body> 
 <div class="page-bg"></div>
 
-<div class="rectangle top"><h1>CONTACT US</h1></div>
+<div class="title"><h1>Contact Us</h1></div>
 
 <div class="rectangle right"><h2>SEND US A MESSAGE</h2> 
 <form>
@@ -24,16 +24,19 @@
 </div>
 
 <div class="rectangle left"><br>
-  <b> Address: </b>
-  <p> address info</p>
-  <b> Phone: </b>
-  <p> phone number info</p>
-  <b> Email: </b>
-  <p> email address info</p>
+  <div class="location"><img src="location.png" alt="location" width="40" height="40"></div>
+  <b> ADDRESS: </b>
+  <p> Tea City, Tea Land</p>
+  <div class="call"><img src="call.png" alt="call" width="40" height="40"></div>
+  <b> PHONE: </b>
+  <p> 08500000</p>
+  <div class="mail"><img src="mail.png" alt="mail" width="40" height="40"></div>
+  <b> EMAIL: </b>
+  <p> LilacTea@gmail.com</p>
   <br>
   </div>
-
   </body>
+
    
 <style>
 
@@ -53,6 +56,7 @@ pointer-events: none;
 }
 
 body {
+font-family: Arial, sans-serif;
 margin: 0;
 height: 100vh;
 display: flex;
@@ -65,14 +69,15 @@ position: relative;
 
 .left {
 position: absolute;
-top: 50%;
-margin-left: 5%;
+top: 60%;
+margin-left: 15%;
 transform: translateY(-50%);
-width: 300px; 
-height: 250px;  
-background-color: #c458df;
+width: 235px;   
+background-color: #d17de6;
 border: 1px solid #6a1e73;
-border-radius: 4px;
+padding: 20px;
+border-radius: 5px;
+ 
 }
 
 .top {
@@ -98,9 +103,13 @@ padding: 40px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-font-size: 45px;
-color: rgb(255, 239, 255);
+.title {
+  grid-area: title;
+  padding: 13px;
+  color: #6a1e73;
+  font-weight: bold;
+  font-size: 45px;
+  text-align: center;
 }
 
 h2 {
@@ -109,10 +118,15 @@ margin-left: 10%;
 
 p {
 margin-left: 25%;
+font-size: 15px;
+color: white;
 }
 
 b {
+font-size: 20px;
+font-weight: 100px;
 margin-left: 20%;
+color: #6a1e73;
 }
 
 form input {

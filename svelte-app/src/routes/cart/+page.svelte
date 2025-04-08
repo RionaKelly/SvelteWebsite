@@ -12,10 +12,9 @@
 
 <div class="page-bg"></div>
 
-
+<button class="checkout-button">CHECKOUT</button>
 
 <div class="rectangle right"><h2>SHIPPING DETAILS</h2></div>
-<div class="rectangle bottom"><h3>CHECKOUT</h3></div>
 
     
 <style>
@@ -51,6 +50,24 @@
   background-color: #d476ee;
   border: 1px solid #771d81;
   border-radius: 4px;
+}
+.checkout-button {
+  position: fixed;
+  bottom: 100px;
+  right: 280px;
+  background-color: #d58fe8; 
+  color: white;
+  border: 2px solid purple;
+  padding: 12px 30px;
+  border-radius: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+
+.checkout-button:hover {
+  background-color: #ad35ce;
 }
 
 .page-bg {

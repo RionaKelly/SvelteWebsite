@@ -14,7 +14,14 @@
 
 <button class="checkout-button">CHECKOUT</button>
 
-<div class="rectangle right"><h2>SHIPPING DETAILS</h2></div>
+<div class="rectangle right"><h2>ORDER SUMMARY</h2> 
+<br> <h3>Cherry Vanilla - set of 20 cans</h3>
+<h3> $19.99 </h3>
+<br> 
+<br>
+<h3>Elderflower - set of 20 cans</h3>
+<h3> $19.99 </h3>
+</div>
 
 <div class="page">
 <div class="product-row">
@@ -22,7 +29,7 @@
     <img src="cherry-vanilla.png" alt="Cherry Vanilla">
   </div>
   <div class="product-details">
-    Product details:<br>amount, cost etc.
+    Product details:<br>Cherry Vanilla - Set of 20 cans. <br> $19.99
   </div>
 </div>
 
@@ -31,20 +38,26 @@
     <img src="doctor.png" alt="Doctor Goodwin">
   </div>
   <div class="product-details">
-    Product details:<br>amount, cost etc.
+    Product details:<br>ElderFlower - Set of 20 cans. <br> $19.99
   </div>
 </div>
-
-<div class="total-box">TOTAL :</div>
 </div>
 
+<div class="total-box">TOTAL : $39.98 </div>
   
 <style>
 
   h2{
       text-align: center;
+      font-size: 28px;
   }
   
+  h3{
+    font-size: 23px;
+    text-align: left;
+    font-family: serif;
+  }
+
 .right {
 position: absolute;
 top: 55%;
@@ -61,7 +74,7 @@ border-radius: 4px;
 padding: 30px;
 display: flex;
 flex-direction: column;
-gap: 30px;
+gap: 50px;
 position: relative;
 }
 
@@ -72,11 +85,12 @@ align-items: flex-start;
 }
 
 .product-img {
-background-color: #faecfc;
+background-color: #fefbff;
 padding: 10px;
 border: 1px solid #9c3ab9;
-width: 200px;
+width: 190px;
 height: auto;
+margin-left: 5%;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -88,22 +102,22 @@ height: auto;
 }
 
 .product-details {
-background-color: #f4e1fd;
+background-color: #fdfaff;
 padding: 20px;
-border: 1px solid #d38de8;
+border: 1px solid #9c3ab9;
 width: 250px;
+top: 40%;
 font-size: 20px;
 }
 
 .total-box {
-background-color: #f4c8f9;
-padding: 10px 20px;
-border: 1px solid #d38de8;
-width: fit-content;
-top: 60%;
-margin-left: 40%;
-font-weight: bold;
-color: purple;
+position: absolute;
+top: 73%;
+margin-left: 83%;
+transform: translateY(-50%);
+width: 125px;
+background-color: #efb4ff;
+border-radius: 4px;
 }
 
 
@@ -123,7 +137,8 @@ transition: background 0.3s ease;
 }
 
 .checkout-button:hover {
-background-color: #ad35ce;
+background-color: #6a1e73;
+cursor: pointer;
 }
 
 .page-bg {

@@ -68,7 +68,7 @@ position: relative;
 
 
 .left {
-position: absolute;
+
 top: 60%;
 margin-left: 15%;
 transform: translateY(-50%);
@@ -91,7 +91,7 @@ background-color: #812399;
 }
 
 .right {
-position: absolute;
+
 top: 60%;
 margin-left: 70%;
 transform: translateY(-50%);

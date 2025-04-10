@@ -16,6 +16,28 @@
 
 <div class="rectangle right"><h2>SHIPPING DETAILS</h2></div>
 
+<div class="page">
+  <div class="product-row">
+    <div class="product-img">
+      <img src="cherry-vanilla.png" alt="Cherry Vanilla">
+    </div>
+    <div class="product-details">
+      Product details:<br>amount, cost etc.
+    </div>
+  </div>
+
+  <div class="product-row">
+    <div class="product-img">
+      <img src="doctor.png" alt="Doctor Goodwin">
+    </div>
+    <div class="product-details">
+      Product details:<br>amount, cost etc.
+    </div>
+  </div>
+
+  <div class="total-box">TOTAL :</div>
+</div>
+
     
 <style>
 
@@ -40,21 +62,60 @@
   border-radius: 4px;
 }
 
-.bottom {
-  position: absolute;
-  margin-top: 35%;
-  margin-left: 80%;
-  transform: translateY(-50%);
-  width: 150px; 
-  height: 50px;  
-  background-color: #d476ee;
-  border: 1px solid #771d81;
-  border-radius: 4px;
+.page {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
 }
+
+.product-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.product-img {
+  background-color: #faecfc;
+  padding: 10px;
+  border: 1px solid #9c3ab9;
+  width: 200px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-details {
+  background-color: #f4e1fd;
+  padding: 20px;
+  border: 1px solid #d38de8;
+  width: 250px;
+  font-size: 20px;
+}
+
+.total-box {
+  background-color: #f4c8f9;
+  padding: 10px 20px;
+  border: 1px solid #d38de8;
+  width: fit-content;
+  top: 60%;
+  margin-left: 40%;
+  font-weight: bold;
+  color: purple;
+}
+
+
 .checkout-button {
-  position: fixed;
+  position: absolute;
   bottom: 100px;
-  right: 280px;
+  right: 300px;
   background-color: #d58fe8; 
   color: white;
   border: 2px solid purple;

@@ -73,7 +73,7 @@
         const storedPassword = localStorage.getItem('lilacUserPassword');
 
         if (!logInEmail) {
-                alert('Please enter an email!');
+                alert('Invalid or no email has been entered. If you dont have an account, please press on Sign Up! :)');
                 return;
             }
 
@@ -143,20 +143,25 @@
         <div class="account-details">
             <div class="user-info">
                 <h1>Account Details</h1>
-                <div class="details-text">
-                    <p><strong>Name:</strong> {user.name}</p>
-                <p><strong>Email:</strong> {user.email}</p>
-                {#if user.phoneNumber}
-                    <p><strong>Phone Number:</strong> {user.phoneNumber}</p>
-                {/if}
-                {#if user.address}
-                    <p><strong>Address:</strong> {user.address}</p>
-                {/if}
+                <div class="background">
+                    <div class="details-text">
+                        <p><strong>Name:</strong> {user.name}</p>
+                        <p><strong>Email:</strong> {user.email}</p>
+                        {#if user.phoneNumber}
+                            <p><strong>Phone Number:</strong> {user.phoneNumber}</p>
+                        {/if}
+                        {#if user.address}
+                            <p><strong>Address:</strong> {user.address}</p>
+                        {/if}
+                    </div>
+                    <button class="edit">Edit →</button>
                 </div>
                 <div class="order-history">
                     <h1>Order History</h1>
-                    <div class="details-text">
-                        <p>You haven't placed any orders yet.</p>
+                    <div class="background">
+                        <div class="details-text">
+                            <p>You haven't placed any orders yet.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -208,8 +213,8 @@
     max-width: auto;
     padding: 30px;
     text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
     margin-left: 3rem;
     margin-right: 3rem;
 }
@@ -234,7 +239,7 @@
     cursor: pointer;
 }
 
-.account-details button {
+.profile button {
     width: 150px;
     align-items: center;
     padding: 7px 16px;
@@ -245,6 +250,19 @@
     border-radius: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.edit {
+    font-size: 15px;
+    width: 70px;
+    padding: 5px;
+    justify-content: right;
+    align-items: right;
+    color: #ffffff;
+    background-color: #df99f5;
+    border-color: #6a1e73;
+    border-radius: 15px;
     cursor: pointer;
 }
 
@@ -296,22 +314,22 @@
     padding-left: 30px;
     max-width: 900px;
     column-count: 2;
-}
-
-.user-info {
     text-align: left;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .order-history {
     padding-top: 30px;
     align-items: right;
     justify-content: center;
+    text-align: left;
+    padding-top: 40px;
 }
 
-.details-text {
+.background {
     background-color: #f5dafd;
     color: #6a1e73;
     padding: 10px;
+    padding-top: 15px;
 }
 </style>

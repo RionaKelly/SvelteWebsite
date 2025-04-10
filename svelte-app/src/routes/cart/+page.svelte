@@ -122,23 +122,26 @@ border-radius: 4px;
 
 
 .checkout-button {
-position: absolute;
-bottom: 100px;
-right: 300px;
-background-color: #d58fe8; 
-color: white;
-border: 2px solid purple;
-padding: 12px 30px;
-border-radius: 20px;
-font-size: 18px;
-cursor: pointer;
-box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-transition: background 0.3s ease;
+  
+  position: absolute;
+  top: 80%;
+  margin-left: 70%;
+  transform: translateY(-50%);
+  padding: 7px 16px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #df99f5;
+  border-color: #6a1e73;
+  border-radius: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .checkout-button:hover {
-background-color: #6a1e73;
-cursor: pointer;
+  transform: translateY(-1px);
+  background-color: #dc83f7;
+  box-shadow: 0 6px 15px #cd72db;
+  cursor: pointer;
 }
 
 .page-bg {

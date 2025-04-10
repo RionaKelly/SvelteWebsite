@@ -28,15 +28,17 @@
 <style>
 
 h1{
-  font-size: 140px;
+  font-size: 150px;
   margin-left: 44%;
   margin-top: 10%;
+  color: rgb(121, 19, 121);
   
 }
 
 p{
-  font-size: 20px;
-  margin-left: 45%;
+  font-size: 80px;
+  margin-left: 35%;
+  color: rgb(121, 19, 121);
   
 }
 
@@ -63,7 +65,7 @@ p{
   width: 650px; 
   height: 650px;
   margin-right: 10px; 
-  opacity: 0.6; /* Reduces transparency to 60% */
+  opacity: 0.6; 
 }
 
 .image-container img:last-child {

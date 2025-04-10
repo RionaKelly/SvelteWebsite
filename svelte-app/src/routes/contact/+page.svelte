@@ -69,6 +69,7 @@ position: relative;
 
 .left {
 
+position: fixed;
 top: 60%;
 margin-left: 15%;
 transform: translateY(-50%);
@@ -80,18 +81,10 @@ border-radius: 5px;
  
 }
 
-.top {
-position: absolute;
-top: 25%;
-left: 50%;
-transform: translateX(-50%);
-width: 300px; 
-height: 65px;  
-background-color: #812399;
-}
 
 .right {
 
+position: fixed;
 top: 60%;
 margin-left: 70%;
 transform: translateY(-50%);
@@ -100,7 +93,7 @@ background-color: #f7e4fc;
 border: 1px solid #6a1e73;
 border-radius: 4px;
 padding: 40px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .title {

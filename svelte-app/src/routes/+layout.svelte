@@ -3,20 +3,28 @@
     import { Header, Footer } from "$lib";
 </script>
 
-<!-- Header -->
-<Header />
+<div id="layout-container">
+    <!-- Header -->
+    <Header />
 
-<!-- Content -->
-<mains>
-    <slot />
-</mains>
+    <!-- Content -->
+    <mains>
+        <slot />
+    </mains>
 
-<!-- Footer -->
-<Footer />
+    <!-- Footer -->
+    <Footer />
+</div>
 
 <style>
-    main {
-        padding: 2rem;
-        text-align: center;
+    #layout-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
+
+    mains {
+        flex: 1;
+    }
+    
 </style>

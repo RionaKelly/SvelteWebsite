@@ -50,6 +50,6 @@ We used Svelte.js for our website as a UI framework to assist with the creation 
 - During the process, I learned the importance of proper page structure and how using a wrapper container can help manage the layout more effectively. I also improved my understanding of CSS positioning techniques, mainly how to make elements like the footer stay consistently at the bottom of the page without affecting the layout of other components.
 
 ### Deployment Notes
-[Temporary Deployment Link until I fix it](https://rionakelly.github.io/SvelteWebsite/)
+[Deployment Link](https://rionakelly.github.io/SvelteWebsite/)
 
-I struggled with deploying the website for a bit when I tried to do it on my own but after following the instructions on Blackboard and a little bit of trial and error it all worked.
+*notes here when deployment is complete"

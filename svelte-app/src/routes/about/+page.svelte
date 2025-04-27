@@ -16,8 +16,10 @@
 
 <div class="row">
 <div class="left"><h1>About Us</h1>
-<p>Hi! We are Lilac, a small women-owned tea business based in Tea City, Tea Land. </p>
-<p>We were dissapointed by the current choice in healthy drinks</p>
+<p>Hi! We are Lilac, a small women-owned tea business based in Tea City.</p>
+<p>We were dissapointed by the current choices in healthy drinks that could be found on the market right now, and felt like we could do better. And we were right!</p>
+<p>Since then we have expanded our business across three more continents, all thanks to the incredible support from our consumers. </p>
+<p>Please call us at 08500000 or email us at LilacTea@gmail.com!</p>
 
 </div>
 

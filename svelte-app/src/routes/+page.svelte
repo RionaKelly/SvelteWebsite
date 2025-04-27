@@ -26,7 +26,8 @@
 <div class="page-bg"></div>
 
 <h1>Welcome to Lilac</h1>
-<p>Here at Lilac Tea, we produce affordable Herbal Tea as a fun and stylish alternative to other expensive health drinks currently on the market. </p>
+<p class="first">Here at Lilac Tea, we produce affordable Herbal Tea as a fun and stylish alternative to other expensive health drinks currently on the market.</p>
+<br>
 
  <div class="carousel">{#if Carousel}
  <Carousel
@@ -52,6 +53,14 @@
  <p>Loading carousel...</p>
 {/if}</div>
 
+<br>
+<p>We are a small, woman-owned business in the centre of Tea City. Our drinks are all natural with incredible health benefits that are not seen in any other similar drinks on the market. They are sold in 3 different delicious flavours:</p>
+<ul>
+  <li>- Blueberry Lavender</li>
+  <li>- Elderflower</li>
+  <li>- Cherry Blossom</li>
+</ul>
+
 <style>
 
 .page-bg {
@@ -75,12 +84,28 @@ h1 {
   color: #6a1e73;
   font-weight: bold;
   font-size: 72px;
-  text-align: left;
+  text-align: center;
 }
 
 p {
   padding: 13px;
-  font-size: 18px;
+  font-size: 24px;
+  text-align: left;
+}
+
+ul {
+  padding: 13px;
+  font-size: 24px;
+  text-align: left;
+}
+
+p + ul { /*selects only the uls after a p, to remove the break between them*/
+    margin-top: -36px; 
+}
+
+.first {
+  font-size: 28px;
+  text-align: center;
 }
 
 .carousel {

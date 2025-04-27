@@ -42,7 +42,7 @@ We used Svelte.js for our website as a UI framework to assist with the creation 
 
 **Carla Epifanio Vivero (carlaaev):**
 - Main contributions:Account, Products, TOS
-- *tbd*
+- The main challenge I found throughout this project, which took me the longest to work through, was the products page. I am new to using Svelte, and the products page was the first page where I attempted to add our ideas while guiding me with the lecture slides. It meant learning and researching different ways in which I could incorporate these ideas into our project. Once that page was completed, the rest was smooth sailing and touching up a few things here and there. One of my goals was to maintain consistency throughout, to ensure all pages matched and looked like they formed part of the same website. We discussed visual aspects early on, so everyone had a starting point. The global file was one of our best friends to help us accomplish this. Overall, I greatly enjoyed this project and the team I worked with. We didn't hesitate to communicate issues or ask each other for help. I learned a great deal about how Svelte works and felt more comfortable with JavaScript.
 
 **Montana Nicholas (MontanaNicholas):**
 - Main contributions: Cart, Contact, 404
@@ -51,4 +51,5 @@ We used Svelte.js for our website as a UI framework to assist with the creation 
 
 ### Deployment Notes
 [Temporary Deployment Link until I fix it](https://rionakelly.github.io/SvelteWebsite/)
+
 I struggled with deploying the website for a bit when I tried to do it on my own but after following the instructions on Blackboard and a little bit of trial and error it all worked.

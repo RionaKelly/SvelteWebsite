@@ -1,13 +1,13 @@
 <script>
-
+    import { base } from '$app/paths';
 </script>
 
 
 <nav>
     <ul>
-        <li><a href="/faq">FAQ</a></li>
-        <li><a href="/tos">ToS</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="{base}/faq">FAQ</a></li>
+        <li><a href="{base}/tos">ToS</a></li>
+        <li><a href="{base}/contact">Contact</a></li>
     </ul>
 </nav>
 

@@ -3,6 +3,8 @@
 </head>
 
 <script>
+  import { base } from '$app/paths';
+
   import { onMount } from 'svelte';
 
   onMount(() => {
@@ -26,7 +28,7 @@
 <div class="page">
 <div class="product-row">
   <div class="product-img">
-    <img src="cherry-vanilla.png" alt="Cherry Vanilla">
+    <img src="{base}/cherry-vanilla.png" alt="Cherry Vanilla">
   </div>
   <div class="product-details">
     Product details:<br>Cherry Vanilla - Set of 20 cans. <br> $19.99
@@ -35,7 +37,7 @@
 
 <div class="product-row">
   <div class="product-img">
-    <img src="doctor.png" alt="Doctor Goodwin">
+    <img src="{base}/doctor.png" alt="Doctor Goodwin">
   </div>
   <div class="product-details">
     Product details:<br>ElderFlower - Set of 20 cans. <br> $19.99

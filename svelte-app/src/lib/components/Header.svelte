@@ -1,6 +1,7 @@
 <script>
     // import Navigation.svelte from lib folder
     import { Navigation } from "$lib"
+    import { base } from '$app/paths';
 </script>
 
 
@@ -8,7 +9,7 @@
     <!-- Logo -->
     <div class="logo">
         <a href="/">
-            <img src="/logo.png" alt="Website Logo">
+            <img src="{base}/logo.png" alt="Website Logo">
         </a>
         <h1>Lilac</h1>
     </div>

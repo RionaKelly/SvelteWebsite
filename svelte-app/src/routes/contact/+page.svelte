@@ -3,6 +3,8 @@
 </head>
 
 <script>
+import { base } from '$app/paths';
+
   import { onMount } from 'svelte';
 
   onMount(() => {
@@ -24,13 +26,13 @@
 </div>
 
 <div class="rectangle left"><br>
-  <div class="location"><img src="location.png" alt="location" width="40" height="40"></div>
+  <div class="location"><img src="{base}/location.png" alt="location" width="40" height="40"></div>
   <b> ADDRESS: </b>
   <p> Tea City, Tea Land</p>
-  <div class="call"><img src="call.png" alt="call" width="40" height="40"></div>
+  <div class="call"><img src="{base}/call.png" alt="call" width="40" height="40"></div>
   <b> PHONE: </b>
   <p> 08500000</p>
-  <div class="mail"><img src="mail.png" alt="mail" width="40" height="40"></div>
+  <div class="mail"><img src="{base}/mail.png" alt="mail" width="40" height="40"></div>
   <b> EMAIL: </b>
   <p> LilacTea@gmail.com</p>
   <br>

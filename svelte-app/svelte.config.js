@@ -1,16 +1,34 @@
 import adapter from '@sveltejs/adapter-static';
 
+// used to determine if we are using npm run dev
+const dev = process.env.NODE_ENV === 'development';
+const repoName = 'https://github.com/RionaKelly/SvelteWebsite'; // 👈 Replace with your repo name!
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter() 
-		/*,vite: {
-			optimizeDeps: {
-			  include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
-			}
- 			// plugins: []
-		} */
+		adapter: adapter(),
+		paths: {
+			base: dev ? '' : `/${repoName}`
+		},
 	}
 };
 
 export default config;
+
+// import adapter from '@sveltejs/adapter-static';
+
+// /** @type {import('@sveltejs/kit').Config} */
+// const config = {
+// 	kit: {
+// 		adapter: adapter() 
+// 		/*,vite: {
+// 			optimizeDeps: {
+// 			  include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
+// 			}
+//  			// plugins: []
+// 		} */
+// 	}
+// };
+
+// export default config;

@@ -4,12 +4,14 @@
 
 <script>
 // @ts-nocheck
+    import { base } from '$app/paths';
 
     import { onMount } from 'svelte';
 
     onMount(() => {
         console.log("About Page Loaded");
     })
+    
 </script>
 
 <div class="page-bg"></div>
@@ -23,7 +25,7 @@
 
 </div>
 
-<div class="right" align="right"><img src="threeWomen.jpg" alt="Three Women" width="600" height="400"></div>
+<div class="right" align="right"><img src="{base}/threeWomen.jpg" alt="Three Women" width="600" height="400"></div>
 </div>
  
 

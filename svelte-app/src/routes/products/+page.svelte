@@ -50,7 +50,7 @@
 <div class="catalog">
   <div class="catalog-item">
     <div class="catalog-title">
-    <a href="/">
+    <a href="{base}/">
     <img src="{base}/grape.png" alt="Blueberry Lavender Tea Cans" width="600" height="400">
     </a>
     <h2>Blueberry Lavender</h2>
@@ -74,7 +74,7 @@
   
   <div class="catalog-item">
     <div class="catalog-title">
-    <a href="/">
+    <a href="{base}/">
     <img src="{base}/doctor.png" alt="Elderflower" width="600" height="400">
     </a>
     <h2>Elderflower</h2>
@@ -98,7 +98,7 @@
   
   <div class="catalog-item">
     <div class="catalog-title">
-    <a href="/">
+    <a href="{base}/">
     <img src="{base}/cherry-vanilla.png" alt="Cherry Blossom" width="600" height="400">
     </a>
     <h2>Cherry Blossom</h2>

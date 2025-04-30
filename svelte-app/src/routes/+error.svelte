@@ -3,6 +3,7 @@
 </head>
 
 <script>
+    import { base } from '$app/paths';
     import { onMount } from 'svelte';
 
     onMount(() => {
@@ -18,9 +19,9 @@
 <p>PAGE NOT FOUND</p>
 
 <div class="image-container">
-  <img src="cat.png" alt="cat">
-  <img src="cat.png" alt="cat">
-  <img src="cat.png" alt="cat">
+  <img src="{base}/cat.png" alt="cat">
+  <img src="{base}/cat.png" alt="cat">
+  <img src="{base}/cat.png" alt="cat">
 </div>
 
 </body>

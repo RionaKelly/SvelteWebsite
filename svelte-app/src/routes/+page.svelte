@@ -3,6 +3,7 @@
 </head>
 
 <script>
+  import { base } from '$app/paths';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
 
@@ -39,13 +40,13 @@
      swiping
  >
      <div><center>
-      <img src="grape.png" alt="Blueberry Lavender Tea Cans" width="300" height="200">
+      <img src="{base}/grape.png" alt="Blueberry Lavender Tea Cans" width="300" height="200">
       <h2>Blueberry Lavender</h2></center></div>
      <div><center>
-      <img src="doctor.png" alt="Elderflower" width="300" height="200">
+      <img src="{base}/doctor.png" alt="Elderflower" width="300" height="200">
       <h2>Elderflower</h2></center></div>
      <div><center>
-      <img src="cherry-vanilla.png" alt="Cherry Blossom" width="300" height="200">
+      <img src="{base}/cherry-vanilla.png" alt="Cherry Blossom" width="300" height="200">
       <h2>Cherry Blossom</h2></center></div>
  </Carousel>
 {:else}
